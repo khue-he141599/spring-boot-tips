@@ -23,4 +23,9 @@ public class UserServiceImpl implements UserService {
     public List<UserEntity> getAllUsers() {
         return userRepository.findAll();
     }
+
+    @Override
+    public UserEntity findByUserNameAndUserEmail(String userName, String userEmail) {
+        return userRepository.findByUserNameAndUserEmail(userName, userEmail);
+    }
 }
