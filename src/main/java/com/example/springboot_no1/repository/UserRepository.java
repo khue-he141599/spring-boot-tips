@@ -2,6 +2,8 @@ package com.example.springboot_no1.repository;
 
 import com.example.springboot_no1.entity.user.UserEntity;
 import jakarta.transaction.Transactional;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Modifying;
@@ -54,4 +56,6 @@ public interface UserRepository extends JpaRepository<UserEntity, Long>, JpaSpec
     @Query(value = "SELECT COUNT(u.id) from java_user_001", nativeQuery = true)
     long getToalUser();
 
+    // Phân trang
+    Page<UserEntity> findByUserName(String userName, Pageable pageable);
 }
