@@ -9,9 +9,9 @@ import java.math.BigDecimal;
 import java.util.List;
 
 @Repository
-public class ProductRepositoryImpl implements ProductRepository {
+public class ProductRepositoryImpl  { //implements ProductRepository
 
-    @Override
+//    @Override
     public ProductEntity createProduct(ProductCreateRequest product) {
         ProductEntity productEntity = new ProductEntity();
         productEntity.setId(1L);
@@ -20,7 +20,7 @@ public class ProductRepositoryImpl implements ProductRepository {
         return productEntity;
     }
 
-    @Override
+//    @Override
     public List<ProductEntity> findAllProducts() {
         ProductEntity productEntity = new ProductEntity();
         productEntity.setId(1L);
