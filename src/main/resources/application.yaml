@@ -32,3 +32,9 @@ spring:
             required: true
           ssl:
             enable: true
+    kafka:
+      bootstrap-servers: localhost:19092
+      consumer:
+        group-id: otp-group-id
+        auto-offset-reset: earliest
+        enable-auto-commit: true
